@@ -412,7 +412,7 @@ export function GlobeDemo() {
           }}
           className="div"
         >
-          <h1 className="text-center font-[#D08C11] text-5xl md:text-4xl font-bold text-white dark:text-white">
+          <h1 className="text-center font-bold text-5xl md:text-4xl text-white">
             FOSS SUMMIT '25
           </h1>
          

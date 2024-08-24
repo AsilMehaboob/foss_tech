@@ -38,10 +38,10 @@ export default function Navbar() {
           <a href="/" className="text-base font-semibold leading-6 text-white">
             Home
           </a>
-          <a href="/register" className="text-base font-semibold leading-6 text-white">
+          <a href="#" className="text-base font-semibold leading-6 text-white">
             Register
           </a>
-          <a href="/help" className="text-base font-semibold leading-6 text-white">
+          <a href="#" className="text-base font-semibold leading-6 text-white">
             Help
           </a>
         </div>
