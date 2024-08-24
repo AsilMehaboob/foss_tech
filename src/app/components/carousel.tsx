@@ -15,8 +15,8 @@ export function FOSSpeakerCardsCarousel() {
   ));
 
   return (
-    <div className="w-full h-full  md:py-20 px-4">
-      <h2 className="max-w-7xl mx-auto text-center text-lg sm:text-xl md:text-3xl lg:text-5xl font-bold text-neutral-50 dark:text-neutral-50 font-sans">
+    <div className="w-full h-full py-8 md:py-20 px-2 sm:px-4">
+      <h2 className="max-w-7xl mx-auto text-center text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-neutral-50 dark:text-neutral-50 font-sans">
         Meet the Speakers
       </h2>
       <Carousel items={cards} />
@@ -26,8 +26,8 @@ export function FOSSpeakerCardsCarousel() {
 
 const SpeakerContent = ({ description, imageUrl }: { description: { title: string; details: string[]; alt: string }; imageUrl: string }) => {
   return (
-    <div className="bg-[#F5F5F7] dark:bg-neutral-800 p-4 sm:p-6 md:p-8 lg:p-14 rounded-3xl mb-4 max-w-lg md:max-w-2xl lg:max-w-3xl mx-auto">
-      <p className="text-neutral-600 dark:text-neutral-400 text-sm sm:text-base md:text-lg lg:text-2xl font-sans">
+    <div className="bg-[#F5F5F7] dark:bg-neutral-800 p-6 sm:p-8 md:p-10 lg:p-14 rounded-3xl mb-4 max-w-full md:max-w-2xl lg:max-w-3xl mx-auto">
+      <p className="text-neutral-600 dark:text-neutral-400 text-base sm:text-lg md:text-xl lg:text-2xl font-sans">
         <span className="font-bold text-neutral-700 dark:text-neutral-200 block mb-2">
           {description.title}
         </span>
@@ -51,7 +51,7 @@ const data = [
     id: 1,
     category: "Artificial Intelligence and Machine Learning",
     title: "Andrew Ng",
-    src: image1.src, // Use image URL string
+    src: image1.src,
     content: (
       <SpeakerContent
         description={{
@@ -61,7 +61,7 @@ const data = [
           ],
           alt: "Andrew Ng speaking on Artificial Intelligence and Machine Learning",
         }}
-        imageUrl={image1.src} // Use image URL string
+        imageUrl={image1.src}
       />
     ),
   },
@@ -69,7 +69,7 @@ const data = [
     id: 2,
     category: "Software Development and Python",
     title: "Guido van Rossum",
-    src: image2.src, // Use image URL string
+    src: image2.src,
     content: (
       <SpeakerContent
         description={{
@@ -79,7 +79,7 @@ const data = [
           ],
           alt: "Guido van Rossum discussing Software Development and Python",
         }}
-        imageUrl={image2.src} // Use image URL string
+        imageUrl={image2.src}
       />
     ),
   },
@@ -87,7 +87,7 @@ const data = [
     id: 3,
     category: "Software Freedom and Ethics",
     title: "Richard Stallman",
-    src: image3.src, // Use image URL string
+    src: image3.src,
     content: (
       <SpeakerContent
         description={{
@@ -97,7 +97,7 @@ const data = [
           ],
           alt: "Richard Stallman on Software Freedom and Ethics",
         }}
-        imageUrl={image3.src} // Use image URL string
+        imageUrl={image3.src}
       />
     ),
   },
@@ -105,7 +105,7 @@ const data = [
     id: 4,
     category: "Open Source Ecosystem",
     title: "Mitchell Baker",
-    src: image4.src, // Use image URL string
+    src: image4.src,
     content: (
       <SpeakerContent
         description={{
@@ -115,7 +115,7 @@ const data = [
           ],
           alt: "Mitchell Baker speaking on the Open Source Ecosystem",
         }}
-        imageUrl={image4.src} // Use image URL string
+        imageUrl={image4.src}
       />
     ),
   },
@@ -123,7 +123,7 @@ const data = [
     id: 5,
     category: "Cybersecurity",
     title: "Kevin Mitnick", // Replaced speaker
-    src: image5.src, // Use image URL string
+    src: image5.src,
     content: (
       <SpeakerContent
         description={{
@@ -133,7 +133,7 @@ const data = [
           ],
           alt: "Kevin Mitnick discussing Cybersecurity",
         }}
-        imageUrl={image5.src} // Use image URL string
+        imageUrl={image5.src}
       />
     ),
   },
@@ -141,7 +141,7 @@ const data = [
     id: 6,
     category: "Technology and Innovation",
     title: "Elon Musk", // Replaced speaker
-    src: image6.src, // Use image URL string
+    src: image6.src,
     content: (
       <SpeakerContent
         description={{
@@ -151,9 +151,8 @@ const data = [
           ],
           alt: "Elon Musk on Technology and Innovation",
         }}
-        imageUrl={image6.src} // Use image URL string
+        imageUrl={image6.src}
       />
     ),
   },
 ];
-
