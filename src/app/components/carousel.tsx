@@ -17,7 +17,7 @@ export function FOSSpeakerCardsCarousel() {
   return (
     <div className="w-full h-full py-20">
       <h2 className="max-w-7xl pl-4 mx-auto text-center text-xl md:text-5xl font-bold text-neutral-50 dark:text-neutral-50 font-sans">
-        Meet the FOSS Speakers
+        Meet the Speakers
       </h2>
       <Carousel items={cards} />
     </div>
