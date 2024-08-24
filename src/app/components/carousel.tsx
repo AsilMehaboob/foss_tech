@@ -27,7 +27,7 @@ export function FOSSpeakerCardsCarousel() {
 const SpeakerContent = ({ description, imageUrl }: { description: { title: string; details: string[]; alt: string }; imageUrl: string }) => {
   return (
     <div className="bg-[#F5F5F7] dark:bg-neutral-800 p-6 sm:p-8 md:p-10 lg:p-14 rounded-3xl mb-4 max-w-full md:max-w-2xl lg:max-w-3xl mx-auto">
-      <p className="text-neutral-600 font-sofia dark:text-neutral-400 text-base sm:text-lg md:text-xl lg:text-2xl font-sans">
+      <p className="text-neutral-600 font-sofia dark:text-neutral-400 text-base sm:text-lg md:text-xl lg:text-2xl ">
         <span className="font-bold font-sofia text-neutral-700 dark:text-neutral-200 block mb-2">
           {description.title}
         </span>
