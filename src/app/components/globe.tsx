@@ -395,7 +395,7 @@ export function GlobeDemo() {
   ];
 
   return (
-    <div className="flex font-sofia flex-row items-center justify-center py-20 h-screen md:h-auto dark:bg-black bg-black
+    <div className="flex font-sofia flex-row items-center justify-center py-20   md:h-auto dark:bg-black bg-black
     relative w-full">
       <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] px-4">
         <motion.div
@@ -412,13 +412,13 @@ export function GlobeDemo() {
           }}
           className="div"
         >
-          <h1 className="text-center font-#D08C11 text-5xl md:text-4xl font-bold text-white dark:text-white">
+          <h1 className="text-center font-[#D08C11] text-5xl md:text-4xl font-bold text-white dark:text-white">
             FOSS SUMMIT '25
           </h1>
          
         </motion.div>
         <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-black z-40" />
-        <div className=" w-full -bottom-20 h-72 md:h-full z-10">
+        <div className=" w-full bottom-20 h-72 md:h-full z-10">
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
       </div>

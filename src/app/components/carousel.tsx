@@ -15,8 +15,8 @@ export function FOSSpeakerCardsCarousel() {
   ));
 
   return (
-    <div className="w-full h-full py-20">
-      <h2 className="max-w-7xl pl-4 mx-auto text-center text-xl md:text-5xl font-bold text-neutral-50 dark:text-neutral-50 font-sans">
+    <div className="w-full h-full  md:py-20 px-4">
+      <h2 className="max-w-7xl mx-auto text-center text-lg sm:text-xl md:text-3xl lg:text-5xl font-bold text-neutral-50 dark:text-neutral-50 font-sans">
         Meet the Speakers
       </h2>
       <Carousel items={cards} />
@@ -26,20 +26,22 @@ export function FOSSpeakerCardsCarousel() {
 
 const SpeakerContent = ({ description, imageUrl }: { description: { title: string; details: string[]; alt: string }; imageUrl: string }) => {
   return (
-    <div className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4">
-      <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
-        <span className="font-bold text-neutral-700 dark:text-neutral-200">
+    <div className="bg-[#F5F5F7] dark:bg-neutral-800 p-4 sm:p-6 md:p-8 lg:p-14 rounded-3xl mb-4 max-w-lg md:max-w-2xl lg:max-w-3xl mx-auto">
+      <p className="text-neutral-600 dark:text-neutral-400 text-sm sm:text-base md:text-lg lg:text-2xl font-sans">
+        <span className="font-bold text-neutral-700 dark:text-neutral-200 block mb-2">
           {description.title}
         </span>
         {description.details.join(' ')}
       </p>
-      <Image
-        src={imageUrl}
-        alt={description.alt}
-        height={500}
-        width={500}
-        className="md:w-1/2 md:h-1/2 h-full pt-8 w-full mx-auto object-contain"
-      />
+      <div className="pt-6">
+        <Image
+          src={imageUrl}
+          alt={description.alt}
+          height={500}
+          width={500}
+          className="w-full h-auto object-contain"
+        />
+      </div>
     </div>
   );
 };
@@ -154,3 +156,4 @@ const data = [
     ),
   },
 ];
+
