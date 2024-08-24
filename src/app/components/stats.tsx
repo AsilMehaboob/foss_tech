@@ -83,7 +83,7 @@ export default function Stats() {
   }, []);
 
   return (
-    <section className="flex items-center justify-evenly h-[50vh] w-[100vw] bg-black bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] text-white">
+    <section className="flex items-center justify-evenly h-[50vh] w-[100vw] bg-black text-white">
       <AnimatePresence>
         <motion.div
           ref={participantCountRef}

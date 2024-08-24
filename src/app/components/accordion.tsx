@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   Accordion,
   AccordionContent,
@@ -38,12 +39,22 @@ const FOSSAccordion: React.FC = () => {
   return (
     <Accordion type="single" collapsible>
       {speakerFAQs.map((faq, index) => (
-        <AccordionItem key={index}  value={`item-${index}`}>
+        <AccordionItem key={index} value={`item-${index}`}>
           <AccordionTrigger className="text-white">
             {faq.question}
           </AccordionTrigger>
-          <AccordionContent className="text-white max-h-32 overflow-hidden transition-all duration-300 ease-in-out">
-            {faq.answer}
+          <AccordionContent className="text-white">
+            <AnimatePresence>
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: 'auto', opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                style={{ width: '100%', overflow: 'hidden' }} // Ensures consistent width
+              >
+                {faq.answer}
+              </motion.div>
+            </AnimatePresence>
           </AccordionContent>
         </AccordionItem>
       ))}
