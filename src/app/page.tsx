@@ -1,9 +1,8 @@
 "use client"
 import Image from "next/image";
 import { FOSSpeakerCardsCarousel } from "./components/carousel";
-import Speakers from "./components/speaker";
-import { FloatingDockDemo } from "./components/dock";
-import NavBar from "./components/navbar";
+
+
 import Navbar from "./components/navbar";
 import Stats from "./components/stats";
 import { GlobeDemo } from "./components/globe";

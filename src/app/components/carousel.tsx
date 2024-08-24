@@ -11,7 +11,7 @@ import image6 from '../../../public/6.jpg'; // Replaced speaker
 
 export function FOSSpeakerCardsCarousel() {
   const cards = data.map((card, index) => (
-    <Card key={card.src} card={card} index={index} />
+    <Card key={index} card={card} index={index} />
   ));
 
   return (
@@ -24,7 +24,7 @@ export function FOSSpeakerCardsCarousel() {
   );
 }
 
-const SpeakerContent = ({ description, imageUrl }) => {
+const SpeakerContent = ({ description, imageUrl }: { description: { title: string; details: string[]; alt: string }; imageUrl: string }) => {
   return (
     <div className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4">
       <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
@@ -36,8 +36,8 @@ const SpeakerContent = ({ description, imageUrl }) => {
       <Image
         src={imageUrl}
         alt={description.alt}
-        height="500"
-        width="500"
+        height={500}
+        width={500}
         className="md:w-1/2 md:h-1/2 h-full pt-8 w-full mx-auto object-contain"
       />
     </div>
@@ -46,9 +46,10 @@ const SpeakerContent = ({ description, imageUrl }) => {
 
 const data = [
   {
+    id: 1,
     category: "Artificial Intelligence and Machine Learning",
     title: "Andrew Ng",
-    src: image1,
+    src: image1.src, // Use image URL string
     content: (
       <SpeakerContent
         description={{
@@ -58,14 +59,15 @@ const data = [
           ],
           alt: "Andrew Ng speaking on Artificial Intelligence and Machine Learning",
         }}
-        imageUrl={image1}
+        imageUrl={image1.src} // Use image URL string
       />
     ),
   },
   {
+    id: 2,
     category: "Software Development and Python",
     title: "Guido van Rossum",
-    src: image2,
+    src: image2.src, // Use image URL string
     content: (
       <SpeakerContent
         description={{
@@ -75,14 +77,15 @@ const data = [
           ],
           alt: "Guido van Rossum discussing Software Development and Python",
         }}
-        imageUrl={image2}
+        imageUrl={image2.src} // Use image URL string
       />
     ),
   },
   {
+    id: 3,
     category: "Software Freedom and Ethics",
     title: "Richard Stallman",
-    src: image3,
+    src: image3.src, // Use image URL string
     content: (
       <SpeakerContent
         description={{
@@ -92,14 +95,15 @@ const data = [
           ],
           alt: "Richard Stallman on Software Freedom and Ethics",
         }}
-        imageUrl={image3}
+        imageUrl={image3.src} // Use image URL string
       />
     ),
   },
   {
+    id: 4,
     category: "Open Source Ecosystem",
     title: "Mitchell Baker",
-    src: image4,
+    src: image4.src, // Use image URL string
     content: (
       <SpeakerContent
         description={{
@@ -109,14 +113,15 @@ const data = [
           ],
           alt: "Mitchell Baker speaking on the Open Source Ecosystem",
         }}
-        imageUrl={image4}
+        imageUrl={image4.src} // Use image URL string
       />
     ),
   },
   {
+    id: 5,
     category: "Cybersecurity",
     title: "Kevin Mitnick", // Replaced speaker
-    src: image5,
+    src: image5.src, // Use image URL string
     content: (
       <SpeakerContent
         description={{
@@ -126,14 +131,15 @@ const data = [
           ],
           alt: "Kevin Mitnick discussing Cybersecurity",
         }}
-        imageUrl={image5}
+        imageUrl={image5.src} // Use image URL string
       />
     ),
   },
   {
+    id: 6,
     category: "Technology and Innovation",
     title: "Elon Musk", // Replaced speaker
-    src: image6,
+    src: image6.src, // Use image URL string
     content: (
       <SpeakerContent
         description={{
@@ -143,7 +149,7 @@ const data = [
           ],
           alt: "Elon Musk on Technology and Innovation",
         }}
-        imageUrl={image6}
+        imageUrl={image6.src} // Use image URL string
       />
     ),
   },
